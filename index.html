@@ -5,52 +5,52 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>哲学星系 - Philosophy Constellation</title>
   <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    body, html { margin:0; padding:0; height:100%; background:#000; color:#fff; }
+    canvas { position:fixed; top:0; left:0; width:100%; height:100%; z-index:-1; }
+    .container { text-align:center; padding-top:15%; max-width:800px; margin:auto; }
+    h1 { font-size:3em; color:#ffd700; text-shadow:0 0 20px #ffd700; }
+    p#typing { font-size:1.2em; margin-top:20px; color:#ddd; min-height:2em; }
+    .btn { display:inline-block; margin:10px; padding:10px 20px; background:#ffd700; color:#000; border-radius:5px; text-decoration:none; }
+    iframe { margin-top:30px; width:80%; height:500px; border:2px solid #333; border-radius:8px; }
+    footer { margin-top:50px; font-size:0.9em; color:#777; }
+  </style>
 </head>
 <body>
-  <nav class="navbar">
-    <a href="index.html">🌌 哲学星系</a>
-    <a href="blackout.html">⚡ 停电协议</a>
-    <a href="whitepaper/blackout.pdf" target="_blank">📄 白皮书</a>
-    <a href="mailto:renshijian0258@proton.me">📩 联系</a>
-    <a href="https://t.me/renshijian0" target="_blank">💬 Telegram</a>
-  </nav>
+  <canvas id="stars"></canvas>
+  <div class="container">
+    <h1>🌌 哲学星系</h1>
+    <p id="typing"></p>
 
-  <header class="hero">
-    <h1>哲学星系</h1>
-    <p>思想与技术的引力场</p>
-  </header>
+    <div>
+      <a href="blackout.html" class="btn">⚡ 停电协议</a>
+      <a href="whitepaper/blackout.pdf" class="btn" target="_blank">📄 白皮书下载</a>
+      <a href="mailto:renshijian0258@proton.me" class="btn">📧 联系我们</a>
+    </div>
 
-  <main>
-    <section class="intro">
-      <h2>关于</h2>
-      <p>哲学星系是一个思想实验系统：把哲学悖论与技术原型编织成新的叙事宇宙。</p>
-    </section>
+    <!-- 白皮书在线预览 -->
+    <iframe src="whitepaper/blackout.pdf"></iframe>
 
-    <section class="protocols">
-      <h2>核心协议</h2>
-      <div class="cards">
-        <a class="card" href="blackout.html">
-          <h3>⚡ 停电协议</h3>
-          <p>黑暗中的秩序实验</p>
-        </a>
-        <a class="card" href="#">
-          <h3>🔮 神谕与欺骗</h3>
-          <p>Δ7 协议，真实与虚假的神迹</p>
-        </a>
-        <a class="card" href="#">
-          <h3>🌀 语言囚笼</h3>
-          <p>语言如何塑造思维的边界</p>
-        </a>
-        <a class="card" href="#">
-          <h3>🌐 模拟真性</h3>
-          <p>真假现实的不可分辨</p>
-        </a>
-      </div>
-    </section>
-  </main>
+    <footer>
+      © 2025 Philosophy Constellation | 📧 renshijian0258@proton.me | 💬 Telegram: @renshijian0
+    </footer>
+  </div>
 
-  <footer>
-    <p>© 2025 Philosophy Constellation | 📩 <a href="mailto:renshijian0258@proton.me">邮箱</a> | 💬 <a href="https://t.me/renshijian0" target="_blank">Telegram</a></p>
-  </footer>
+  <script>
+    // 星空动效
+    const canvas = document.getElementById("stars");
+    const ctx = canvas.getContext("2d");
+    let stars = [], w, h;
+    function resize(){ w=canvas.width=window.innerWidth; h=canvas.height=window.innerHeight; stars=[];
+      for(let i=0;i<200;i++){ stars.push({x:Math.random()*w,y:Math.random()*h,r:Math.random()*2,d:Math.random()}); } }
+    function draw(){ ctx.clearRect(0,0,w,h); ctx.fillStyle="#fff"; stars.forEach(s=>{ctx.beginPath(); ctx.arc(s.x,s.y,s.r,0,2*Math.PI); ctx.fill(); s.y+=s.d; if(s.y>h) s.y=0;}); }
+    function animate(){ draw(); requestAnimationFrame(animate); }
+    window.addEventListener("resize",resize); resize(); animate();
+
+    // 打字效果
+    const text = "思想与技术的引力场 —— 在这里，哲学悖论与技术原型交织，形成新的叙事宇宙。";
+    let i=0; function typing(){ if(i<text.length){ document.getElementById("typing").innerHTML+=text.charAt(i); i++; setTimeout(typing,80); } }
+    typing();
+  </script>
 </body>
 </html>
