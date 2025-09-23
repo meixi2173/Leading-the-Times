@@ -1,21 +1,113 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>停电协议门户 | Blackout Protocol</title>
+  <title>停电协议 | The Blackout Protocol</title>
   <style>
-    body { margin: 0; display: flex; flex-direction: column; height: 100vh; background: #000; color: #fff; }
-    iframe { flex: 1; border: none; }
-    .enter-btn { padding: 20px; text-align: center; background: #111; }
-    .enter-btn a { padding: 10px 20px; background: #ffd700; color: #000; text-decoration: none; font-weight: bold; border-radius: 5px; }
-    .enter-btn a:hover { background: #ff8c00; color: #fff; }
+    body {
+      margin: 0;
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      background: radial-gradient(circle at center, #000000 70%, #0a0a1a 100%);
+      color: #e6e6e6;
+      line-height: 1.6;
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    header {
+      padding: 60px 20px 40px;
+      background: linear-gradient(180deg, #0a0a1a 0%, #000000 100%);
+    }
+    header h1 {
+      font-size: 2.5rem;
+      color: #00ffc6;
+      margin: 0 0 20px 0;
+      text-shadow: 0 0 15px rgba(0,255,198,0.6);
+    }
+    header p {
+      font-size: 1.2rem;
+      color: #cccccc;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    section {
+      padding: 50px 20px;
+    }
+    section h2 {
+      font-size: 1.8rem;
+      color: #ffd700;
+      margin-bottom: 20px;
+      text-shadow: 0 0 8px rgba(255,215,0,0.5);
+    }
+
+    iframe {
+      width: 90%;
+      height: 600px;
+      border: 2px solid #333;
+      border-radius: 10px;
+      margin: 20px auto;
+      display: block;
+      background: #111;
+    }
+
+    a.download-link {
+      display: inline-block;
+      margin: 15px;
+      padding: 10px 20px;
+      border: 1px solid #00ffc6;
+      border-radius: 6px;
+      color: #00ffc6;
+      text-decoration: none;
+      transition: background 0.3s, color 0.3s;
+    }
+    a.download-link:hover {
+      background: #00ffc6;
+      color: #000;
+    }
+
+    footer {
+      background: #0a0a1a;
+      padding: 30px 20px;
+      font-size: 0.9rem;
+      color: #999;
+    }
+    footer a {
+      color: #00ffc6;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
-  <iframe src="whitepaper/blackout.pdf"></iframe>
-  <div class="enter-btn">
-    <a href="site/index.html">进入网站</a>
-  </div>
+  <header>
+    <h1>⚡ 停电协议 | The Blackout Protocol ⚡</h1>
+    <p>
+      “断电，是毁灭，还是新秩序的开端？”
+      <br> 一个关于技术、自由与秩序的未来构想。
+    </p>
+  </header>
+
+  <section id="documents">
+    <h2>📜 白皮书 | Whitepaper</h2>
+    <iframe src="whitepaper.pdf"></iframe>
+    <a href="whitepaper.pdf" class="download-link" download>⬇️ 下载白皮书</a>
+
+    <h2>⚡ 操作协议 | Protocol</h2>
+    <iframe src="protocol.pdf"></iframe>
+    <a href="protocol.pdf" class="download-link" download>⬇️ 下载操作协议</a>
+  </section>
+
+  <footer>
+    <p>📧 联系我们: 
+      <a href="mailto:renshijian0258@proton.me">renshijian0258@proton.me</a> |
+      <a href="https://t.me/renshijian0" target="_blank">Telegram</a>
+    </p>
+    <p>© 2025 The Blackout Protocol. All Rights Reserved.</p>
+  </footer>
 </body>
 </html>
