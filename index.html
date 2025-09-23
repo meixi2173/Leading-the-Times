@@ -3,75 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>停电协议 | The Blackout Protocol</title>
-  <link rel="stylesheet" href="style.css">
+  <title>停电协议门户 | Blackout Protocol</title>
+  <style>
+    body { margin: 0; display: flex; flex-direction: column; height: 100vh; background: #000; color: #fff; }
+    iframe { flex: 1; border: none; }
+    .enter-btn { padding: 20px; text-align: center; background: #111; }
+    .enter-btn a { padding: 10px 20px; background: #ffd700; color: #000; text-decoration: none; font-weight: bold; border-radius: 5px; }
+    .enter-btn a:hover { background: #ff8c00; color: #fff; }
+  </style>
 </head>
 <body>
-  <!-- 星空背景 -->
-  <div id="stars"></div>
-  <div id="shooting-stars"></div>
-
-  <!-- 首页 Hero 区 -->
-  <section class="hero">
-    <h1 class="glitch" data-text="停电协议">停电协议</h1>
-    <h2>The Blackout Protocol</h2>
-    <p class="subtitle">一场关于未来、控制与自由的技术革命</p>
-    <div class="hero-buttons">
-      <button class="btn" id="openWhitepaper">📜 白皮书</button>
-      <button class="btn" id="openCeremony">⚡ 操作手册</button>
-      <a href="#contact" class="btn">📩 联系我们</a>
-    </div>
-  </section>
-
-  <!-- 核心介绍 -->
-  <section class="intro">
-    <div class="card">
-      <h3>停电</h3>
-      <p>象征断开旧秩序，让人类重新思考“控制”的意义。</p>
-    </div>
-    <div class="card">
-      <h3>协议</h3>
-      <p>不仅是技术文档，更是通往新世界的契约。</p>
-    </div>
-    <div class="card">
-      <h3>黑暗</h3>
-      <p>自由与未知的孕育之地，革命从此生长。</p>
-    </div>
-  </section>
-
-  <!-- 白皮书 Modal -->
-  <div id="whitepaperModal" class="modal">
-    <div class="modal-content">
-      <span class="close" data-target="whitepaperModal">&times;</span>
-      <h2>📜 白皮书</h2>
-      <iframe src="whitepaper.pdf" width="100%" height="500px"></iframe>
-      <a href="whitepaper.pdf" download class="btn">⬇ 下载白皮书</a>
-    </div>
+  <iframe src="whitepaper/blackout.pdf"></iframe>
+  <div class="enter-btn">
+    <a href="site/index.html">进入网站</a>
   </div>
-
-  <!-- 操作手册 Modal -->
-  <div id="ceremonyModal" class="modal">
-    <div class="modal-content">
-      <span class="close" data-target="ceremonyModal">&times;</span>
-      <h2>⚡ 启动仪式手册</h2>
-      <iframe src="ceremony.pdf" width="100%" height="500px"></iframe>
-      <a href="ceremony.pdf" download class="btn">⬇ 下载操作手册</a>
-    </div>
-  </div>
-
-  <!-- 联系我们 -->
-  <section id="contact" class="contact">
-    <h2>📩 联系我们</h2>
-    <p>邮箱：<a href="mailto:renshijian0258@proton.me">renshijian0258@proton.me</a></p>
-    <p>Telegram：<a href="https://t.me/renshijian0" target="_blank">@renshijian0</a></p>
-    <p>GitHub：<a href="https://github.com/meixi2173/Leading-the-Times" target="_blank">项目仓库</a></p>
-  </section>
-
-  <!-- 页脚 -->
-  <footer>
-    <p>© 2025 Philosophy Constellation | 停电，不是终结，而是新生。</p>
-  </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
