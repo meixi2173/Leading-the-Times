@@ -1,0 +1,105 @@
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: black;
+  color: #f1f1f1;
+  overflow-x: hidden;
+  text-align: center;
+}
+#stars {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+  overflow: hidden;
+  z-index: -1;
+}
+.hero {
+  padding: 100px 20px;
+}
+.glitch {
+  font-size: 64px;
+  color: white;
+  position: relative;
+  animation: glitch 2s infinite;
+}
+@keyframes glitch {
+  0% { text-shadow: 2px 2px red; }
+  50% { text-shadow: -2px -2px blue; }
+  100% { text-shadow: 2px -2px green; }
+}
+.subtitle {
+  font-size: 20px;
+  margin: 20px 0;
+}
+.btn {
+  padding: 12px 24px;
+  background: #111;
+  border: 2px solid #f1f1f1;
+  color: #f1f1f1;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s;
+  display: inline-block;
+  margin: 5px;
+}
+.btn:hover {
+  background: #f1f1f1;
+  color: #111;
+}
+.intro {
+  display: flex;
+  justify-content: space-around;
+  padding: 50px 20px;
+  flex-wrap: wrap;
+}
+.card {
+  background: #111;
+  padding: 20px;
+  border-radius: 8px;
+  width: 25%;
+  min-width: 200px;
+  margin: 10px;
+}
+.whitepaper, .experience, .contact {
+  padding: 50px 20px;
+}
+#blackoutOverlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: black;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#blackoutOverlay p {
+  font-size: 20px;
+  margin-bottom: 20px;
+  display: none;
+}
+#lightOnBtn {
+  display: none;
+}
+.footer {
+  background: #111;
+  color: #aaa;
+  padding: 20px;
+  text-align: center;
+}
+.telegram-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  background: #0088cc;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+}
+.telegram-btn img {
+  width: 20px;
+  height: 20px;
+}

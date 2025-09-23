@@ -1,0 +1,15 @@
+{
+  "name": "停电协议 | The Blackout Protocol",
+  "short_name": "停电协议",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#111111",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
