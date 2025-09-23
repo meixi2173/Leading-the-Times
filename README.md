@@ -1,14 +1,19 @@
-# ⚡ 停电协议 | The Blackout Protocol
+# 停电协议 (Blackout Protocol)
 
-思想与技术的交汇 · 数字神话叙事宇宙
+一个哲学-技术混合型实验项目，探索数字黑暗中的思考方式。
 
-## 📜 Whitepaper & Protocol
-- [白皮书下载](./whitepaper.pdf)
-- [操作协议下载](./protocol-guide.pdf)
+## 官方网站
 
-## 🚀 部署
-直接上传至 GitHub Pages 或任何静态服务器即可。
+访问: https://[您的用户名].github.io/blackout-protocol
 
-## 📩 联系
-- Email: renshijian0258@proton.me
-- Telegram: [@renshijian0](https://t.me/renshijian0)
+## 技术栈
+
+- 纯 HTML/CSS/JavaScript
+- 响应式设计
+- GitHub Pages 部署
+
+## 联系方式
+
+- 邮箱: renshijian0258@proton.me
+- 电报: @renshijian0
+- 项目状态: 开发进行中
