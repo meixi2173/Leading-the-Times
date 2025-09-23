@@ -2,52 +2,37 @@
 <html lang="zh">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>停电协议 | The Blackout Protocol</title>
-  <style>
-    body { font-family: Arial, sans-serif; background: #000; color: #fff; margin: 0; padding: 0; }
-    header { background: #111; padding: 20px; text-align: center; }
-    h1 { color: #FFD700; }
-    section { padding: 40px; max-width: 900px; margin: auto; }
-    .card { background: rgba(255,255,255,0.05); padding: 20px; margin: 20px 0; border-radius: 8px; }
-    a { color: #FFD700; text-decoration: none; }
-    footer { background: #111; padding: 20px; text-align: center; font-size: 14px; color: #aaa; }
-  </style>
+  <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-  <header>
-    <h1>⚡ 停电协议 | The Blackout Protocol ⚡</h1>
-    <p>人世间 ✦ 无垠</p>
-  </header>
-
-  <section>
-    <div class="card">
-      <h2>关于协议</h2>
-      <p>停电协议并不仅仅是一个技术实验，而是一种关于未来社会与人类自由的全新隐喻。它模拟了当秩序失效、系统停摆时，人类如何在黑暗中寻找新的叙事与秩序。</p>
-    </div>
-
-    <div class="card">
-      <h2>📜 白皮书节选</h2>
-      <p><em>“当灯光熄灭，真正的系统才开始显形。停电协议并不是对现有系统的破坏，而是一次对依赖与自由的重构实验。”</em></p>
-      <p><a href="docs/blackout-lite.pdf" target="_blank">下载完整简化版白皮书 PDF</a></p>
-    </div>
-
-    <div class="card">
-      <h2>🕯️ 启动仪式手册节选</h2>
-      <p>第一步：断开已知的连接。<br>
-         第二步：进入停电宇宙的入口。<br>
-         第三步：书写你的见证，见证新的秩序。</p>
-      <p><a href="docs/ritual-lite.pdf" target="_blank">下载简化版启动仪式手册 PDF</a></p>
-    </div>
-
-    <div class="card">
-      <h2>联系方式</h2>
-      <p>📧 Email: <a href="mailto:renshijian0258@proton.me">renshijian0258@proton.me</a></p>
-      <p>💬 Telegram: <a href="https://t.me/renshijian0" target="_blank">@renshijian0</a></p>
-    </div>
-  </section>
-
-  <footer>
-    <p>© 2025 停电协议 | The Blackout Protocol · 人世间 ✦ 无垠</p>
-  </footer>
+  <div id="portal">
+    <iframe src="whitepaper.pdf"></iframe>
+    <button id="enterSite">进入官网</button>
+  </div>
+  <main id="mainSite" style="display:none;">
+    <header>
+      <h1>停电协议 · The Blackout Protocol</h1>
+      <p>数字神话叙事宇宙的一部分 —— 探索自由意志、系统熵值与技术未来。</p>
+    </header>
+    <section>
+      <h2>📜 白皮书</h2>
+      <iframe src="whitepaper.pdf"></iframe>
+    </section>
+    <section>
+      <h2>⚡ 启动仪式手册</h2>
+      <p>本手册为停电协议的操作仪式，包含流程、角色分配与剧场交互方式。</p>
+    </section>
+    <section id="contact">
+      <h2>📩 联系我们</h2>
+      <p>邮箱：<a href="mailto:renshijian0258@proton.me">renshijian0258@proton.me</a></p>
+      <p>Telegram：<a href="https://t.me/renshijian0" target="_blank">@renshijian0</a></p>
+    </section>
+    <footer>
+      <p>© 2025 停电协议 · 数字神话叙事宇宙</p>
+    </footer>
+  </main>
+  <script src="assets/script.js"></script>
 </body>
 </html>
