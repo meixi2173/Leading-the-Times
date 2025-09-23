@@ -4,28 +4,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>停电协议 | The Blackout Protocol</title>
-  <meta name="description" content="停电协议：一场关于未来、控制与自由的哲学与技术实验。">
-  <meta property="og:title" content="停电协议 | The Blackout Protocol">
-  <meta property="og:description" content="一场关于未来、控制与自由的哲学与技术实验">
-  <meta property="og:image" content="assets/og-cover.png">
-  <link rel="manifest" href="assets/manifest.json">
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- 星空背景 -->
   <div id="stars"></div>
+  <div id="shooting-stars"></div>
 
+  <!-- 首页 Hero 区 -->
   <section class="hero">
     <h1 class="glitch" data-text="停电协议">停电协议</h1>
     <h2>The Blackout Protocol</h2>
     <p class="subtitle">一场关于未来、控制与自由的技术革命</p>
     <div class="hero-buttons">
-      <a href="#whitepaper" class="btn">📜 白皮书</a>
-      <a href="#experience" class="btn">⚡ 操作协议</a>
+      <button class="btn" id="openWhitepaper">📜 白皮书</button>
+      <button class="btn" id="openCeremony">⚡ 操作手册</button>
       <a href="#contact" class="btn">📩 联系我们</a>
     </div>
   </section>
 
+  <!-- 核心介绍 -->
   <section class="intro">
     <div class="card">
       <h3>停电</h3>
@@ -41,37 +39,37 @@
     </div>
   </section>
 
-  <section id="whitepaper" class="whitepaper">
-    <h2>📜 白皮书</h2>
-    <iframe src="whitepaper/blackout.pdf" width="100%" height="500px"></iframe>
-    <p><a href="whitepaper/blackout.pdf" download class="btn">⬇️ 下载白皮书</a></p>
-  </section>
-
-  <section id="experience" class="experience">
-    <h2>⚡ 操作协议</h2>
-    <p>体验停电与重启的仪式。</p>
-    <button id="blackoutBtn" class="btn">熄灯</button>
-    <div id="blackoutOverlay">
-      <p id="hiddenMessage">自由不是光明，而是选择黑暗的勇气。</p>
-      <button id="lightOnBtn" class="btn">点亮</button>
+  <!-- 白皮书 Modal -->
+  <div id="whitepaperModal" class="modal">
+    <div class="modal-content">
+      <span class="close" data-target="whitepaperModal">&times;</span>
+      <h2>📜 白皮书</h2>
+      <iframe src="whitepaper.pdf" width="100%" height="500px"></iframe>
+      <a href="whitepaper.pdf" download class="btn">⬇ 下载白皮书</a>
     </div>
-  </section>
+  </div>
 
+  <!-- 操作手册 Modal -->
+  <div id="ceremonyModal" class="modal">
+    <div class="modal-content">
+      <span class="close" data-target="ceremonyModal">&times;</span>
+      <h2>⚡ 启动仪式手册</h2>
+      <iframe src="ceremony.pdf" width="100%" height="500px"></iframe>
+      <a href="ceremony.pdf" download class="btn">⬇ 下载操作手册</a>
+    </div>
+  </div>
+
+  <!-- 联系我们 -->
   <section id="contact" class="contact">
     <h2>📩 联系我们</h2>
     <p>邮箱：<a href="mailto:renshijian0258@proton.me">renshijian0258@proton.me</a></p>
-    <p>GitHub：<a href="https://github.com/meixi2173/Leading-the-Times" target="_blank">项目仓库</a></p>
     <p>Telegram：<a href="https://t.me/renshijian0" target="_blank">@renshijian0</a></p>
+    <p>GitHub：<a href="https://github.com/meixi2173/Leading-the-Times" target="_blank">项目仓库</a></p>
   </section>
 
-  <footer class="footer">
-    <p>© 2025 停电协议 | 哲学星系计划</p>
-    <div class="social-links">
-      <a href="https://t.me/renshijian0" target="_blank" class="telegram-btn">
-        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/telegram.svg" alt="Telegram" />
-        加入 Telegram
-      </a>
-    </div>
+  <!-- 页脚 -->
+  <footer>
+    <p>© 2025 Philosophy Constellation | 停电，不是终结，而是新生。</p>
   </footer>
 
   <script src="script.js"></script>
