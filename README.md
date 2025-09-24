@@ -1,22 +1,14 @@
-# The Blackout Protocol Website
+# Blackout Protocol Website
 
-This repository contains the official website for **The Blackout Protocol**.
+This repository contains the official website for the Blackout Protocol project.
 
 ## Structure
-- `public/index.html` — Main website
-- `public/whitepaper.pdf` — Simplified Whitepaper
-- `public/ceremony.pdf` — Simplified Ceremony Manual
+- index.html : Main page
+- style.css : Styling
+- js/main.js : Interactivity
+- whitepaper.pdf : Simplified whitepaper
+- ritual-manual.pdf : Simplified ritual manual
 
-## Deployment
-You can deploy locally or upload the contents of `public/` to any web host.
-
-### Local Preview
-```bash
-cd public
-python3 -m http.server 8080
-```
-Then open [http://localhost:8080](http://localhost:8080).
-
----
-
-© 2025 The Blackout Protocol — 人世间 & 无垠
+## Contact
+- Email: renshijian0258@proton.me
+- Telegram: renshijian0
