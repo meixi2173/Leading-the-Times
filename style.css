@@ -1,17 +1,110 @@
-
-/* style.css - simple elegant dark theme */
-:root{
-  --bg:#050406;
-  --muted:#bfbfbf;
-  --accent:#00ffc6;
-  --gold:#ffcf40;
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-*{box-sizing:border-box}
-body{margin:0;font-family:Inter, Arial, sans-serif;background:var(--bg);color:#eee;line-height:1.5}
-.hero{padding:4rem 1rem;text-align:center;background:linear-gradient(180deg, rgba(0,0,0,0.6), transparent)}
-h1{font-size:2.2rem;margin:0 0 .5rem;color:var(--gold)}
-.lead{margin:0 0 1rem;color:var(--muted)}
-.cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:1rem}
-.btn{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:.6rem 1rem;border-radius:8px;color:var(--accent);text-decoration:none}
-.content{max-width:860px;margin:3rem auto;padding:0 1rem}
-footer{padding:2rem;text-align:center;color:var(--muted);font-size:.9rem}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #0c0c0c 0%, #1a1a2e 50%, #16213e 100%);
+    color: #ffffff;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 2rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(45deg, #00ffc6, #00ccff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #cccccc;
+    font-style: italic;
+}
+
+/* Sections */
+section {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+}
+
+h2 {
+    color: #00ffc6;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+/* Document links */
+.doc-links {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.doc-link {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background: linear-gradient(45deg, #00ffc6, #00ccff);
+    color: #000 !important;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+.doc-link:hover {
+    transform: translateY(-2px);
+    text-decoration: none;
+}
+
+/* Contact section */
+.contact p {
+    margin-bottom: 0.5rem;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: #888;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .doc-links {
+        flex-direction: column;
+    }
+}

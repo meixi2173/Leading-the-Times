@@ -1,14 +1,24 @@
-# Blackout Protocol — Website Package (v4)
+# Blackout Protocol Website
 
-This package contains a simple website plus bilingual (EN/CN) PDF artifacts:
-- index.html, style.css
-- whitepaper_en.pdf, whitepaper_cn.pdf
-- ritual_en.pdf, ritual_cn.pdf
-- assets/ folder (placeholders)
+A static website for the Blackout Protocol project.
 
-## How to use
-1. Unzip blackout-protocol-v4.zip
-2. Host with any static server (GitHub Pages, Netlify, or python -m http.server locally)
-3. PDFs are standalone and can be downloaded / embedded.
+## Files Included
 
-Contact: renshijian0258@proton.me
+- `index.html` - Main website page
+- `style.css` - Stylesheet
+- `js/main.js` - JavaScript functionality
+- `whitepaper.pdf` - Project whitepaper
+- `ritual-manual.pdf` - Ritual manual documentation
+
+## How to View
+
+1. Extract all files to a folder
+2. Open `index.html` in a web browser
+3. Or host on any static web server
+
+## Contact
+
+- Email: renshijian0258@proton.me
+- Telegram: renshijian0
+
+© 2025 Blackout Protocol
