@@ -1,14 +1,14 @@
-# Blackout Protocol Website
+# Blackout Protocol — Website Package (v4)
 
-This repository contains the official website for the Blackout Protocol project.
+This package contains a simple website plus bilingual (EN/CN) PDF artifacts:
+- index.html, style.css
+- whitepaper_en.pdf, whitepaper_cn.pdf
+- ritual_en.pdf, ritual_cn.pdf
+- assets/ folder (placeholders)
 
-## Structure
-- index.html : Main page
-- style.css : Styling
-- js/main.js : Interactivity
-- whitepaper.pdf : Simplified whitepaper
-- ritual-manual.pdf : Simplified ritual manual
+## How to use
+1. Unzip blackout-protocol-v4.zip
+2. Host with any static server (GitHub Pages, Netlify, or python -m http.server locally)
+3. PDFs are standalone and can be downloaded / embedded.
 
-## Contact
-- Email: renshijian0258@proton.me
-- Telegram: renshijian0
+Contact: renshijian0258@proton.me
