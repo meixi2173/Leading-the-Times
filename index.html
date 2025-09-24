@@ -6,6 +6,154 @@
     <title>The Blackout Protocol - Where Philosophy Meets Engineering</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+<!-- 视觉效果控制面板 -->
+<div class="visual-controls">
+    <button onclick="triggerLightning()">⚡ Lightning</button>
+    <button onclick="toggleBlackout()">💡 Blackout</button>
+    <button onclick="enhanceStars()">🌌 Enhance Stars</button>
+    <button onclick="showAphorism()">💭 Philosophy</button>
+</div>
+
+<script>
+// 雷电效果
+function triggerLightning() {
+    const lightning = document.createElement('div');
+    lightning.className = 'lightning-effect';
+    document.body.appendChild(lightning);
+    
+    // 雷声模拟（通过控制台）
+    console.log('🌩️ *THUNDER RUMBLES* - "In darkness, we find clarity"');
+    
+    setTimeout(() => {
+        lightning.remove();
+    }, 1000);
+}
+
+// 关灯效果
+let isBlackout = false;
+function toggleBlackout() {
+    const blackout = document.getElementById('blackout-overlay') || createBlackoutOverlay();
+    isBlackout = !isBlackout;
+    
+    blackout.style.opacity = isBlackout ? '0.9' : '0';
+    
+    // 哲学提示
+    if (isBlackout) {
+        console.log('💡 Lights out - "The protocol begins in darkness"');
+    }
+}
+
+function createBlackoutOverlay() {
+    const overlay = document.createElement('div');
+    overlay.id = 'blackout-overlay';
+    overlay.className = 'blackout-mode';
+    document.body.appendChild(overlay);
+    return overlay;
+}
+
+// 增强星空
+function enhanceStars() {
+    const starsContainer = document.getElementById('enhanced-stars') || createStars();
+    starsContainer.innerHTML = '';
+    createStarfield(starsContainer, 200);
+}
+
+function createStars() {
+    const stars = document.createElement('div');
+    stars.id = 'enhanced-stars';
+    stars.className = 'enhanced-stars';
+    document.body.appendChild(stars);
+    return stars;
+}
+
+function createStarfield(container, count) {
+    for (let i = 0; i < count; i++) {
+        const star = document.createElement('div');
+        star.className = 'star';
+        
+        // 随机属性
+        const size = Math.random() * 2 + 1;
+        const duration = Math.random() * 5 + 3;
+        
+        star.style.cssText = `
+            width: ${size}px;
+            height: ${size}px;
+            left: ${Math.random() * 100}%;
+            top: ${Math.random() * 100}%;
+            animation-duration: ${duration}s;
+            animation-delay: ${Math.random() * 5}s;
+        `;
+        
+        container.appendChild(star);
+    }
+}
+
+// 哲学语录
+const aphorisms = [
+    "Does choice truly exist?",
+    "Darkness reveals what light conceals",
+    "Every system contains its own blackout",
+    "The machine remembers what humanity forgets",
+    "In silence, the protocol speaks",
+    "A blackout is not an end, but a beginning"
+];
+
+function showAphorism() {
+    const text = aphorisms[Math.floor(Math.random() * aphorisms.length)];
+    const aphorism = document.createElement('div');
+    aphorism.className = 'aphorism';
+    aphorism.textContent = text;
+    aphorism.style.left = Math.random() * 70 + 15 + '%';
+    
+    document.body.appendChild(aphorism);
+    
+    setTimeout(() => {
+        aphorism.remove();
+    }, 20000);
+}
+
+// 自动初始化星空
+document.addEventListener('DOMContentLoaded', function() {
+    enhanceStars(); // 初始星空
+    
+    // 随机雷电效果（偶尔触发）
+    setInterval(() => {
+        if (Math.random() < 0.1) { // 10%概率
+            triggerLightning();
+        }
+    }, 30000);
+});
+</script>
+
+<style>
+/* 控制面板样式 */
+.visual-controls {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 10000;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.visual-controls button {
+    background: rgba(0, 0, 0, 0.7);
+    color: #ffd700;
+    border: 1px solid #ffd700;
+    padding: 10px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: all 0.3s;
+}
+
+.visual-controls button:hover {
+    background: #ffd700;
+    color: #000;
+    transform: scale(1.1);
+}
+</style>
 <body>
     <div class="cosmic-background"></div>
     
@@ -121,4 +269,80 @@ Output: 000123 | [CEREMONY] Genesis | Hash: 7f9a3b...</code></pre>
 
     <script src="js/main.js"></script>
 </body>
+<!-- 新增视觉效果控制 -->
+<style>
+/* 雷电动画效果 */
+.lightning-effect {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.1) 50%, transparent 70%);
+    opacity: 0;
+    pointer-events: none;
+    z-index: 9998;
+    animation: lightningFlash 0.3s ease-out;
+}
+
+@keyframes lightningFlash {
+    0% { opacity: 0; }
+    10% { opacity: 0.8; }
+    100% { opacity: 0; }
+}
+
+/* 关灯效果 */
+.blackout-mode {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    z-index: 9997;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 2s ease-in-out;
+}
+
+/* 增强星空背景 */
+.enhanced-stars {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+}
+
+.star {
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    animation: twinkle var(--duration) infinite ease-in-out;
+}
+
+@keyframes twinkle {
+    0%, 100% { opacity: 0.1; transform: scale(1); }
+    50% { opacity: 0.8; transform: scale(1.2); }
+}
+
+/* 哲学语录浮动效果 */
+.aphorism {
+    position: fixed;
+    color: rgba(255, 215, 0, 0.3);
+    font-size: 1.2rem;
+    font-style: italic;
+    pointer-events: none;
+    z-index: 9996;
+    animation: floatAphorism 20s linear infinite;
+}
+
+@keyframes floatAphorism {
+    0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+    10% { opacity: 0.3; }
+    90% { opacity: 0.3; }
+    100% { transform: translateY(-100px) rotate(360deg); opacity: 0; }
+}
+</style>
 </html>
