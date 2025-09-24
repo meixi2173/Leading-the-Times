@@ -1,348 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Blackout Protocol - Where Philosophy Meets Engineering</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <title>Blackout Protocol</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #000; color: #fff; margin: 0; padding: 0; }
+    header { background: #111; padding: 20px; text-align: center; }
+    h1 { color: #FFD700; }
+    section { padding: 40px; max-width: 900px; margin: auto; }
+    .card { background: rgba(255,255,255,0.05); padding: 20px; margin: 20px 0; border-radius: 8px; }
+    a { color: #FFD700; text-decoration: none; }
+    footer { background: #111; padding: 20px; text-align: center; font-size: 14px; color: #aaa; }
+  </style>
 </head>
-<!-- 视觉效果控制面板 -->
-<div class="visual-controls">
-    <button onclick="triggerLightning()">⚡ Lightning</button>
-    <button onclick="toggleBlackout()">💡 Blackout</button>
-    <button onclick="enhanceStars()">🌌 Enhance Stars</button>
-    <button onclick="showAphorism()">💭 Philosophy</button>
-</div>
-
-<script>
-// 雷电效果
-function triggerLightning() {
-    const lightning = document.createElement('div');
-    lightning.className = 'lightning-effect';
-    document.body.appendChild(lightning);
-    
-    // 雷声模拟（通过控制台）
-    console.log('🌩️ *THUNDER RUMBLES* - "In darkness, we find clarity"');
-    
-    setTimeout(() => {
-        lightning.remove();
-    }, 1000);
-}
-
-// 关灯效果
-let isBlackout = false;
-function toggleBlackout() {
-    const blackout = document.getElementById('blackout-overlay') || createBlackoutOverlay();
-    isBlackout = !isBlackout;
-    
-    blackout.style.opacity = isBlackout ? '0.9' : '0';
-    
-    // 哲学提示
-    if (isBlackout) {
-        console.log('💡 Lights out - "The protocol begins in darkness"');
-    }
-}
-
-function createBlackoutOverlay() {
-    const overlay = document.createElement('div');
-    overlay.id = 'blackout-overlay';
-    overlay.className = 'blackout-mode';
-    document.body.appendChild(overlay);
-    return overlay;
-}
-
-// 增强星空
-function enhanceStars() {
-    const starsContainer = document.getElementById('enhanced-stars') || createStars();
-    starsContainer.innerHTML = '';
-    createStarfield(starsContainer, 200);
-}
-
-function createStars() {
-    const stars = document.createElement('div');
-    stars.id = 'enhanced-stars';
-    stars.className = 'enhanced-stars';
-    document.body.appendChild(stars);
-    return stars;
-}
-
-function createStarfield(container, count) {
-    for (let i = 0; i < count; i++) {
-        const star = document.createElement('div');
-        star.className = 'star';
-        
-        // 随机属性
-        const size = Math.random() * 2 + 1;
-        const duration = Math.random() * 5 + 3;
-        
-        star.style.cssText = `
-            width: ${size}px;
-            height: ${size}px;
-            left: ${Math.random() * 100}%;
-            top: ${Math.random() * 100}%;
-            animation-duration: ${duration}s;
-            animation-delay: ${Math.random() * 5}s;
-        `;
-        
-        container.appendChild(star);
-    }
-}
-
-// 哲学语录
-const aphorisms = [
-    "Does choice truly exist?",
-    "Darkness reveals what light conceals",
-    "Every system contains its own blackout",
-    "The machine remembers what humanity forgets",
-    "In silence, the protocol speaks",
-    "A blackout is not an end, but a beginning"
-];
-
-function showAphorism() {
-    const text = aphorisms[Math.floor(Math.random() * aphorisms.length)];
-    const aphorism = document.createElement('div');
-    aphorism.className = 'aphorism';
-    aphorism.textContent = text;
-    aphorism.style.left = Math.random() * 70 + 15 + '%';
-    
-    document.body.appendChild(aphorism);
-    
-    setTimeout(() => {
-        aphorism.remove();
-    }, 20000);
-}
-
-// 自动初始化星空
-document.addEventListener('DOMContentLoaded', function() {
-    enhanceStars(); // 初始星空
-    
-    // 随机雷电效果（偶尔触发）
-    setInterval(() => {
-        if (Math.random() < 0.1) { // 10%概率
-            triggerLightning();
-        }
-    }, 30000);
-});
-</script>
-
-<style>
-/* 控制面板样式 */
-.visual-controls {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 10000;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.visual-controls button {
-    background: rgba(0, 0, 0, 0.7);
-    color: #ffd700;
-    border: 1px solid #ffd700;
-    padding: 10px 15px;
-    border-radius: 20px;
-    cursor: pointer;
-    font-size: 1.2rem;
-    transition: all 0.3s;
-}
-
-.visual-controls button:hover {
-    background: #ffd700;
-    color: #000;
-    transform: scale(1.1);
-}
-</style>
 <body>
-    <div class="cosmic-background"></div>
-    
-    <nav class="main-nav">
-        <div class="nav-container">
-            <div class="logo">Blackout Protocol</div>
-            <ul class="nav-menu">
-                <li><a href="#home" class="nav-link active">Home</a></li>
-                <li><a href="#manual" class="nav-link">Boot Manual</a></li>
-                <li><a href="#whitepaper" class="nav-link">Whitepaper</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <main id="home" class="page-section active">
-        <header class="hero-section">
-            <div class="container">
-                <h1 class="main-title">The Blackout Protocol</h1>
-                <p class="subtitle">Where Philosophy Meets Engineering</p>
-                <p class="tagline">A technological revolution concerning future, control, and freedom</p>
-                
-                <div class="cta-buttons">
-                    <a href="#manual" class="btn primary">Boot Ceremony</a>
-                    <a href="#whitepaper" class="btn secondary">Read Whitepaper</a>
-                </div>
-            </div>
-        </header>
-    </main>
-
-    <section id="manual" class="page-section">
-        <div class="container">
-            <h2>Boot Ceremony Manual</h2>
-            <div class="manual-content">
-                <div class="ceremony-timeline">
-                    <h3>Ceremony Timeline</h3>
-                    <table>
-                        <tr><th>Time</th><th>Action</th></tr>
-                        <tr><td>0-10s</td><td>Silent Assembly | Top Light Focus | Low-Frequency Hum</td></tr>
-                        <tr><td>10-35s</td><td>Director's Declaration</td></tr>
-                        <tr><td>35-50s</td><td>Technical Response | Hash Emerges</td></tr>
-                        <tr><td>50-60s</td><td>Ceremony Concludes | Full Lights On</td></tr>
-                    </table>
-                </div>
-
-                <div class="technical-execution">
-                    <h3>Technical Execution</h3>
-                    <pre><code>Function: ceremonyInit()
-Trigger: After declaration ends
-Output: 000123 | [CEREMONY] Genesis | Hash: 7f9a3b...</code></pre>
-                </div>
-
-                <div class="declaration">
-                    <h3>The Declaration</h3>
-                    <blockquote>
-                        <p>This is a system. Not for entertainment, not for showcasing skill.</p>
-                        <p>It concerns only one question: Does choice truly exist?</p>
-                        <p>From this moment onward, every trigger of ours will be remembered by the machine, undeletable, unforgotten.</p>
-                        <p>Humanity and machine shall together witness the descent of darkness and the eternity of memory.</p>
-                        <p><strong>Let history begin. Action.</strong></p>
-                    </blockquote>
-                    <p class="signature">"All history begins with a single choice."</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="whitepaper" class="page-section">
-        <div class="container">
-            <h2>Technical Whitepaper</h2>
-            <div class="whitepaper-content">
-                <div class="chapter">
-                    <h3>Chapter 1: Preface</h3>
-                    <p>A blackout is not the end, but the beginning of a new order.</p>
-                </div>
-                <div class="chapter">
-                    <h3>Chapter 2: Technical Vision</h3>
-                    <p>Decentralized energy governance, breaking free from reliance on a single power grid.</p>
-                </div>
-                <div class="chapter">
-                    <h3>Chapter 3: Philosophical Foundation</h3>
-<p>Darkness is a metaphor, allowing us to see our true dependencies clearly.</p>
-                </div>
-                <div class="chapter">
-                    <h3>Chapter 4: Application Scenarios</h3>
-                    <p>Theater, social experiments, the future of energy governance.</p>
-                </div>
-                <div class="chapter hidden">
-                    <h3>Chapter 5: Hidden Chapter</h3>
-                    <p>This document does not reveal the entirety of The Blackout Protocol. More content will be illuminated during future blackouts.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="about" class="page-section">
-        <div class="container">
-            <h2>About The Protocol</h2>
-            <div class="about-content">
-                <div class="contact-info">
-                    <h3>Contact</h3>
-                    <p>Email: renshijian0258@proton.me</p>
-                    <p>Telegram: @renshijian0</p>
-                </div>
-                <div class="project-info">
-                    <h3>Project Status</h3>
-                    <p>Active Development</p>
-                    <p>Version: 1.0</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <script src="js/main.js"></script>
+  <header>
+    <h1>⚡ The Blackout Protocol ⚡</h1>
+    <p>Human Domain ✦ Infinite</p>
+  </header>
+  <section>
+    <div class="card">
+      <h2>About the Protocol</h2>
+      <p>The Blackout Protocol is not merely a technical experiment — it's a metaphor for freedom and a new social narrative.</p>
+    </div>
+    <div class="card">
+      <h2>📜 Whitepaper Excerpt</h2>
+      <p><em>"When the lights go out, the real systems become visible."</em></p>
+      <p><a href="docs/blackout-lite.pdf" target="_blank">Download simplified whitepaper (PDF)</a></p>
+    </div>
+    <div class="card">
+      <h2>🕯️ Ritual Manual Excerpt</h2>
+      <p>Step 1: Disconnect from known systems.<br>Step 2: Enter the Blackout realm.<br>Step 3: Write your testimony.</p>
+      <p><a href="docs/ritual-lite.pdf" target="_blank">Download simplified ritual manual (PDF)</a></p>
+    </div>
+    <div class="card">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:renshijian0258@proton.me">renshijian0258@proton.me</a></p>
+      <p>Telegram: <a href="https://t.me/renshijian0" target="_blank">@renshijian0</a></p>
+    </div>
+  </section>
+  <footer>
+    <p>© 2025 The Blackout Protocol · Human Domain ✦ Infinite</p>
+  </footer>
 </body>
-<!-- 新增视觉效果控制 -->
-<style>
-/* 雷电动画效果 */
-.lightning-effect {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.1) 50%, transparent 70%);
-    opacity: 0;
-    pointer-events: none;
-    z-index: 9998;
-    animation: lightningFlash 0.3s ease-out;
-}
-
-@keyframes lightningFlash {
-    0% { opacity: 0; }
-    10% { opacity: 0.8; }
-    100% { opacity: 0; }
-}
-
-/* 关灯效果 */
-.blackout-mode {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.95);
-    z-index: 9997;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 2s ease-in-out;
-}
-
-/* 增强星空背景 */
-.enhanced-stars {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -2;
-}
-
-.star {
-    position: absolute;
-    background: white;
-    border-radius: 50%;
-    animation: twinkle var(--duration) infinite ease-in-out;
-}
-
-@keyframes twinkle {
-    0%, 100% { opacity: 0.1; transform: scale(1); }
-    50% { opacity: 0.8; transform: scale(1.2); }
-}
-
-/* 哲学语录浮动效果 */
-.aphorism {
-    position: fixed;
-    color: rgba(255, 215, 0, 0.3);
-    font-size: 1.2rem;
-    font-style: italic;
-    pointer-events: none;
-    z-index: 9996;
-    animation: floatAphorism 20s linear infinite;
-}
-
-@keyframes floatAphorism {
-    0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
-    10% { opacity: 0.3; }
-    90% { opacity: 0.3; }
-    100% { transform: translateY(-100px) rotate(360deg); opacity: 0; }
-}
-</style>
 </html>
